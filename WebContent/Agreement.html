@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function vali(form)
+	{
+		if(form.checkbox.checked==false)
+			{
+			alert("please check");
+			}
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Agreement</title>
+</head>
+<body>
+<pre>1. This is an agreement between Licensor and Licensee, who is being licensed to use the named Software.
+
+ earlier of Licensee's signature or Licensee's use
+ of the Software.</pre>
+ <form onsubmit="return vali(this);">
+ <input type="checkbox" name="checkbox"  />I Agree.<br />
+ <input type="submit" value="submit" />
+ </form>
+</body>
+</html>
