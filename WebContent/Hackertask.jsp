@@ -14,7 +14,7 @@
 <script>
 function agreement()
 {
-	var newWindow=window.open('Agreement.html','_blank','height=500px','width=500px','title=Agreement','scrollbar=yes');
+	var newWindow=window.open('Agreement.html','_blank','height=400px ,width=500px, top=50, left=500');
 	}
 </script>
 </head>
