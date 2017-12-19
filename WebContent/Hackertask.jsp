@@ -32,6 +32,8 @@ function agreement()
        <tr><td>Task Name:</td><td><%=rs.getString(2) %></td></tr>
        <tr><td>Task Details:</td><td><%=rs.getString(4) %></td></tr>
        <tr><td>Maximum Points:</td><td><%=rs.getString(9) %></td></tr>
+       <tr><td>Skill required to complete task:</td><td><%=rs.getString(10) %></td></tr>
+       <tr><td>Days to complete task:</td><td><%=rs.getString(11) %></td></tr>
         <tr><td><button onclick="agreement()">Start</button></td></tr>
     	</table>
     	<%   
