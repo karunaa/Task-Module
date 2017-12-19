@@ -17,17 +17,22 @@
 	   String tname=request.getParameter("tname");
 	   String tweburl=request.getParameter("tweburl");
 	   String tdetails=request.getParameter("tdetails");
+	   String tskill=request.getParameter("tskill");
+	   String tday=request.getParameter("tday");
 	   String tcompletion=request.getParameter("tcompletion");
 	   String tcreport=request.getParameter("tcreport");
 	   String tvul=request.getParameter("tvul");
 	   String tvreport=request.getParameter("tvreport");
-	   String max=request.getParameter("max");
+	   int a=Integer.parseInt(tcompletion);
+	   int b=Integer.parseInt(tcreport);
+	   int c=Integer.parseInt( tvul);
+	   int d=Integer.parseInt(tvreport);
+	   int fnal=(a+b+c+d);
 	   try{
 	   Class.forName("com.mysql.jdbc.Driver");
 	   Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/haxperts?verifyServerCertificate=false&useSSL=true","root","1234");
 	   Statement stm=con.createStatement();
-	   int i=stm.executeUpdate("insert into task_addition(id,name,weburl,details,task_completion_points,completion_report_points,vulnerability_found_points,vulnerability_reoprt_points, max_points)values('" +tid+" ',' " +tname+" ',' "+tweburl+" ',' "+tdetails+" ',' "+tcompletion+" ',' "+tcreport+" ',' "+tvul+" ',' "+tvreport+" ',' "+max+" ')");
-		
+	   int i=stm.executeUpdate("insert into task_addition(id,name,weburl,details,skills_required,days,task_completion_points,completion_report_points,vulnerability_found_points,vulnerability_reoprt_points,max_points)values('" +tid+" ',' " +tname+" ',' "+tweburl+" ',' "+tdetails+" ',' "+tskill+" ',' "+tday+" ',' "+tcompletion+" ',' "+tcreport+" ',' "+tvul+" ',' "+tvreport+" ',' "+fnal+" ')");
 	   out.println("Task has been added to hacker profile");
 		con.close();
 	   }
